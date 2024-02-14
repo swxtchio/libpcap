@@ -3112,7 +3112,12 @@ endif(WIN32)
 if(ENABLE_REMOTE)
     add_subdirectory(rpcapd)
 endif(ENABLE_REMOTE)
-add_subdirectory(testprogs)
+
+# SWXTCH: Added flag to make test programs optional
+option(PCAP_ENABLE_TESTPROGS "Enable all test programs" OFF)
+if (PCAP_ENABLE_TESTPROGS)
+    add_subdirectory(testprogs)
+endif()
 
 ######################################
 # Register targets
