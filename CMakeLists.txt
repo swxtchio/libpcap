@@ -103,7 +103,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
 # building 32-bit, the size for C++ will win, and, again, hilarity
 # will ensue.
 #
-project(pcap C)
+project(pcap VERSION 1.10.4 LANGUAGES C)
 
 #
 # Setting CMAKE_MACOSX_RPATH to FALSE causes the installed
